@@ -8,7 +8,7 @@ Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 int thirdNumber = ThirdNumber(number);
-if (number <= 1)
+if (number == 0 || number == 1)
 {
     Console.WriteLine("-> третьей цифры нет"); 
 }else
@@ -22,3 +22,4 @@ static int ThirdNumber(int count)
     return digit;
 
 }
+
