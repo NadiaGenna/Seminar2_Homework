@@ -7,6 +7,5 @@
 
 Console.WriteLine("Введите положительное трёхзначное число: ");
 int firstNumber = Convert.ToInt32(Console.ReadLine());
-
 int SecondNumber = (firstNumber % 100) / 10;
-    Console.Write("Вторая цифра этого числа -> " + SecondNumber);
+ Console.Write("Вторая цифра этого числа -> " + SecondNumber);
