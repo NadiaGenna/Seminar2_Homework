@@ -4,7 +4,9 @@
 // 782 -> 8
 // 918 -> 1
 
-Console.WriteLine("Введите трёхзначное число: ");
-int Digit3Number = Convert.ToInt32(Console.ReadLine());
-string stringNumber = Convert.ToString(Digit3Number);
-Console.WriteLine("Вторая цифра этого числа: " + stringNumber[1]);
+
+Console.WriteLine("Введите положительное трёхзначное число: ");
+int firstNumber = Convert.ToInt32(Console.ReadLine());
+
+int SecondNumber = (firstNumber % 100) / 10;
+    Console.Write("Вторая цифра этого числа -> " + SecondNumber);
