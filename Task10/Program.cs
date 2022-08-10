@@ -5,7 +5,14 @@
 // 918 -> 1
 
 
-Console.WriteLine("Введите положительное трёхзначное число: ");
-int firstNumber = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите трёхзначное число: ");
+int firstNumber = int.Parse(Console.ReadLine());
+if (firstNumber < 0)
+{
+    Console.WriteLine ($"Вторая цифра этого числа: {firstNumber * -1 % 100 /10}");
+}
+else
+{
 int SecondNumber = (firstNumber % 100) / 10;
  Console.Write("Вторая цифра этого числа -> " + SecondNumber);
+}
