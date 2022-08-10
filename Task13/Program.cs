@@ -4,8 +4,21 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.Write("Введите число: ");
-int n = int.Parse(Console.ReadLine());
-int k = (int)Math.Log10(n) - 2;
-Console.WriteLine(k < 0 ? "В числе нет третьей цифры" : (n % (int)Math.Pow(10, k+1) / (int)Math.Pow(10, k)).ToString("Третья цифра -> " + k));
+Console.Write("Введите число: "); 
+int number = Convert.ToInt32(Console.ReadLine());
 
+int thirdNumber = ThirdNumber(number);
+if (number <= 1)
+{
+    Console.WriteLine("-> третьей цифры нет"); 
+}else
+{
+    Console.WriteLine("третья цифра -> " + thirdNumber);
+}
+static int ThirdNumber(int count)
+{
+    while (count <= -1000 || count >= 1000) count /= 10;
+    int digit = count % 10;
+    return digit;
+
+}
